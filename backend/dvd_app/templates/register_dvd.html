@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<link rel="stylesheet" href="{% static 'style/style.css'%}">
+	<div id="bg">
+		<header>
+			<h1>DVD REGISTRATION</h1>
+		</header>
+
+		<form method = "post" action="/register_dvd">
+			{% csrf_token %}
+			<div>
+				{{form.as_p}}
+			</div>
+
+			<div>
+				<button type="submit">Register</button>
+			</div>
+		</form>
+
+	</div>
+</html>
